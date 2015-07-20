@@ -6,6 +6,8 @@ RUN apt-get update -q \
  && apt-get install -y vim.tiny wget nano sudo net-tools ca-certificates unzip \
  && rm -rf /var/lib/apt/lists/*
 
+ENV TERM xterm
+
 ENV PG_VERSION=9.4 \
     PG_USER=postgres \
     PG_HOME="/var/lib/postgresql"
