@@ -3,10 +3,8 @@ FROM ubuntu:14.04
 MAINTAINER Michael van der Luit "mvdluit@depraktijkindex.nl"
 
 RUN apt-get update -q \
- && apt-get install -y vim.tiny wget sudo net-tools ca-certificates unzip \
+ && apt-get install -y vim.tiny wget nano sudo net-tools ca-certificates unzip \
  && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get install -y nano
 
 ENV PG_VERSION=9.4 \
     PG_USER=postgres \
