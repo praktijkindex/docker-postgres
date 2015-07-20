@@ -66,6 +66,7 @@ fi
 # allow remote connections to postgresql database
 cat >> ${PG_CONFDIR}/pg_hba.conf <<EOF
 host    all             all             0.0.0.0/0               md5
+host    all             postgres        0.0.0.0/0               trust
 EOF
 
 # allow replication connections to the database
